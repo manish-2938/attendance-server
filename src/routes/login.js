@@ -3,7 +3,7 @@ const User = require('../models/user');
 const router = express.Router();
 const jwt = require('jsonwebtoken');
 
-const SECRET_KEY = 'hello'; 
+const SECRET_KEY = process.env.SECRET_KEY; 
 
 
 router.post('/login', async (req, res) => {
@@ -28,7 +28,8 @@ router.post('/login', async (req, res) => {
     res.cookie('token', token, {
       httpOnly: true, 
       secure: false,
-      maxAge: 3600000 // 1 hour
+      maxAge: 3600000, // 1 hour
+      sameSite: 'none'
     });
     res.status(200).json('Login successful');
   } catch (err) {
