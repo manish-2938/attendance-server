@@ -2,7 +2,8 @@ const mongoose = require('mongoose');
 
 const connectDB = async () => {
     try {
-        await mongoose.connect('mongodb://localhost:27017/placement_management');
+        // await mongoose.connect('mongodb://localhost:27017/placement_management');
+        await mongoose.connect('mongodb+srv://manishk:manish123@cluster0.syj4j.mongodb.net/attendance?retryWrites=true&w=majority&appName=Cluster0');
         console.log("MongoDB connected successfully");
     } catch (error) {
         console.error("MongoDB connection failed:", error.message);
