@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const SECRET_KEY = 'hello'; // Store in environment variables
+const SECRET_KEY = process.env.SECRET_KEY; // Store in environment variables
 
 const authMiddleware = (req, res, next) => {
   const token = req.cookies.token; // Get token from cookies

@@ -20,6 +20,7 @@ const getEvents = async (req, res) => {
         res.json(events);
     } catch (error) {
         res.status(500).json('Failed to fetch events');
+        console.log(error);
     }
 };
 
