@@ -1,6 +1,6 @@
 const Student = require('../models/student');
 const jwt = require('jsonwebtoken');
-const SECRET_KEY = "hello";
+const SECRET_KEY = process.env.SECRET_KEY;
 
 // Get all students
 const getStudents = async (req, res) => {

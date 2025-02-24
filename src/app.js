@@ -20,7 +20,7 @@ connectDB();
 
 const app = express();
 app.use(cors({
-    origin: 'https://attendancemarker.netlify.app', // Allow frontend URL
+    origin: 'https://attendancemarker.in', // Allow frontend URL
     credentials: true,  // Allow credentials (cookies, HTTP authentication)
   }));
 app.use(bodyParser.json());
